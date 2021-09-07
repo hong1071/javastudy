@@ -8,7 +8,7 @@ public class Prob1 {
 		
 		int a = 100;
 		
-		if(a %= 3 == 0) {
+		if(a%3 == 0) {
 			System.out.println("3의 배수입니다.");
 		}
 		else {
