@@ -8,7 +8,8 @@ public class Prob3 {
 
 		Scanner scanner = new Scanner(System.in);
 
-		int n = 7;
+		System.out.print("숫자를 입력하세요 : ");
+		int n = scanner.nextInt();
 		if(n%2 == 1) {
 			int a = 0;
 			for(int i=0; i<=n; i++) {
@@ -16,7 +17,6 @@ public class Prob3 {
 					a += i;
 				}
 			}
-			System.out.println("숫자를 입력하세요 : " + n);
 			System.out.println("결과값 : " + a);
 		}
 		else {
@@ -26,7 +26,6 @@ public class Prob3 {
 					a += i;
 				}
 			}
-			System.out.println("숫자를 입력하세요 : " + n);
 			System.out.println("결과값 : " + a);
 		}
 		
