@@ -22,7 +22,7 @@ public class TV {
 	}
 
 	public void volume(int volume) {
-		if(this.power == true) {
+		if(this.power) {
 			this.volume = volume;
 		}
 		else {
@@ -32,8 +32,8 @@ public class TV {
 	}
 	
 	public void volume(boolean VolControl) {
-		if(this.power == true) {
-			if(VolControl == true) {
+		if(this.power) {
+			if(VolControl) {
 				volume++;
 			}
 			else {
@@ -48,7 +48,7 @@ public class TV {
 	}
 	
 	public void channel(int channelNum) {
-		if(this.power == true) {
+		if(this.power) {
 			this.channel = channelNum;
 		}
 		else {
@@ -58,8 +58,8 @@ public class TV {
 	}
 
 	public void channel(boolean CHcontrol) {
-		if(this.power == true) {
-			if(CHcontrol == true) {
+		if(this.power) {
+			if(CHcontrol) {
 				channel++;
 			}
 			else {
