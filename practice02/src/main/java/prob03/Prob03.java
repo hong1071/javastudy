@@ -12,6 +12,9 @@ public class Prob03 {
 
 		// 수정된 배열 원소 출력
 		printCharArray(c);
+		
+		String a = "Hello World";
+		System.out.println(a.length());
 	}
 
 	private static void replaceSpace(char[] c) {
