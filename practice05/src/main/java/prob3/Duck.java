@@ -13,4 +13,10 @@ public class Duck extends Bird{
 		System.out.println("오리(" + name + ")가 소리내어 웁니다.");
 	}
 
+	@Override
+	public String toString() {
+		return name;
+		
+	}
+	
 }
