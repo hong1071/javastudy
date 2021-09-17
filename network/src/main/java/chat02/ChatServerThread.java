@@ -110,7 +110,6 @@ public class ChatServerThread extends Thread{
 		//ack
 		printWriter.println("join:ok");
 		printWriter.flush();
-		
 	}
 	
 	private void addWriter(PrintWriter writer) {
@@ -122,7 +121,6 @@ public class ChatServerThread extends Thread{
 	private void doMessage(String message) {
 		/* 잘 구현 해보기 */
 		broadcast(this.nickname + ":" + message);
-
 	}
 	
 	private void doQuit(Writer writer) {
@@ -137,5 +135,4 @@ public class ChatServerThread extends Thread{
 			listWriters.remove(writer);
 		}
 	}
-	
 }
