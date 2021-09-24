@@ -34,12 +34,18 @@ public class Money {
 	
 	public boolean equals(Money money) {
 		boolean result = false;
-		if(this.amount == money.amount) {
-			result = true;
+		if(money instanceof Money) {
+			if(this.amount == money.amount) {
+				result = true;
+			}
+			if(this.amount != money.amount) {
+				result = false;
+			}
 		}
-		if(this.amount != money.amount) {
+		else {
 			result = false;
 		}
+		
 		return result;
 	}
 }

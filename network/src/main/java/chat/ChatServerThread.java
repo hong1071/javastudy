@@ -1,4 +1,4 @@
-package chat02;
+package chat;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,8 +10,6 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
-
-import echo.EchoServer;
 
 public class ChatServerThread extends Thread{
 
@@ -31,7 +29,7 @@ public class ChatServerThread extends Thread{
 	public void run() {
 		
 		
-		// 1. remote Host INfomation
+		// 1. remote Host Infomation
 		InetSocketAddress inetRemoteSocketaddress =  (InetSocketAddress) socket.getRemoteSocketAddress();
 		String remoteHostAddress = inetRemoteSocketaddress.getAddress().getHostAddress();
 		int remoteHostPort = inetRemoteSocketaddress.getPort();	
@@ -119,7 +117,7 @@ public class ChatServerThread extends Thread{
 	}
 	
 	private void doMessage(String message) {
-		/* 잘 구현 해보기 */
+		
 		broadcast(this.nickname + ":" + message);
 	}
 	
@@ -130,7 +128,7 @@ public class ChatServerThread extends Thread{
 	}
 	
 	private void removeWriter(Writer writer) {
-		/* 잘 구현 해보기*/
+		
 		synchronized (listWriters) {
 			listWriters.remove(writer);
 		}

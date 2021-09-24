@@ -1,4 +1,4 @@
-package chat03.gui;
+package chatGUI;
 import java.util.Scanner;
 
 public class ChatClientApp {

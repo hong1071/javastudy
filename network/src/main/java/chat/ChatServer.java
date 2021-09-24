@@ -1,8 +1,7 @@
-package chat02;
+package chat;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.Writer;
 import java.net.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,12 +16,15 @@ public class ChatServer {
 		ServerSocket serverSocket = null;
 	
 		try {
+			//1. 소켓 생성
 			serverSocket = new ServerSocket();
 			
+			//2. ip주소 설정 후 포트 번호와 함께 바인딩
 			String hostAddress = InetAddress.getLocalHost().getHostAddress();
 			serverSocket.bind(new InetSocketAddress(hostAddress, PORT));
-			log("연결 기다림" + hostAddress + " : " + PORT);
+			log("연결 기다림 " + hostAddress + " : " + PORT);
 			
+			//3. 소켓 accept처리, 서버스레드 생성
 			while(true) {
 				Socket socket = serverSocket.accept();
 				new ChatServerThread(socket, listWriters).start();

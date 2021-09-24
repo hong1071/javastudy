@@ -5,7 +5,7 @@ import java.net.*;
 import java.util.*;
 
 public class EchoClient {
-	private static final String SERVER_IP = "127.0.0.1";
+	private static final String SERVER_IP = "0.0.0.0";
 	private static final int SERVER_PORT = 6000;
 	public static void main(String[] args) {
 		

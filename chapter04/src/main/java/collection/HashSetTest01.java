@@ -13,7 +13,9 @@ public class HashSetTest01 {
 		String s2 = new String("도우너");
 		
 		s.add("둘리");
+		System.out.println(s.size());
 		s.add("마이콜");
+		System.out.println(s.size());
 		s.add("또치");
 		
 		System.out.println(s.size());

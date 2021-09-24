@@ -1,7 +1,5 @@
-package chat02;
-import java.io.BufferedReader;
+package chat;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.InetSocketAddress;
@@ -10,7 +8,7 @@ import java.util.Scanner;
 
 public class ChatClient {
 	
-	private static final String SERVER_IP = "61.83.118.69";
+	private static final String SERVER_IP = "192.168.56.1";		//유동
 	private static final int SERVER_PORT = ChatServer.PORT;
 	
 	public static void main(String[] args){
@@ -33,7 +31,7 @@ public class ChatClient {
 			//4. reader/writer 생성
 				printWriter = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), "utf-8"), true);
 				
-			//5. join ㅡㅍ로토콜
+			//5. join 프로토콜
 				System.out.print("닉네임>>");
 				String nickname = "";
 				
