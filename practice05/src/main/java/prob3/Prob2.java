@@ -14,6 +14,6 @@ public class Prob2 {
 		bird02.sing();
 		System.out.println( "참새의 이름은 " + bird02.toString() + "입니다." );
 		
-		bird02.name = "멍충이";
+		bird02.setName("멍충이");
 	}
 }
