@@ -1,4 +1,6 @@
 package prob5;
 
-public class MyStack {
+import java.util.Stack;
+
+public class MyStack{
 }
